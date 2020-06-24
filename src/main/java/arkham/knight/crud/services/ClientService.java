@@ -19,8 +19,22 @@ public class ClientService {
     }
 
 
-    public void CreateClient(Client clientToCreate){
+    public void SaveClient(Client clientToCreate){
 
         clientRepository.save(clientToCreate);
+    }
+
+
+    public Client FindClientById(Long clientId){
+
+        return clientRepository.findClientById(clientId);
+    }
+
+
+    public void DeleteClient(Long clientId){
+
+        Client clientToDelete = clientRepository.findClientById(clientId);
+
+        clientRepository.delete(clientToDelete);
     }
 }

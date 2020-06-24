@@ -24,7 +24,7 @@ public class CrudApplication {
 
             clientToCreate.setLastName("Rodriguez");
 
-            clientService.CreateClient(clientToCreate);
+            clientService.SaveClient(clientToCreate);
 
         };
     }
